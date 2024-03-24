@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="et" dir="ltr">
+
+<head>
+    <title>Kodu&uuml;lesanne</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Allikas: https://favicon.io/emoji-favicons/-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <style>
+        body,
+        html {
+            background-color: lightblue;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero-image {
+            background-image: url("superhero.jpg");
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+
+        table,
+        th,
+        td {
+            border: 0px solid black;
+        }
+
+        #menu__toggle {
+            opacity: 0;
+        }
+
+        #menu__toggle:checked+.menu__btn>span {
+            transform: rotate(45deg);
+        }
+
+        #menu__toggle:checked+.menu__btn>span::before {
+            top: 0;
+            transform: rotate(0deg);
+        }
+
+        #menu__toggle:checked+.menu__btn>span::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+        #menu__toggle:checked~.menu__box {
+            left: 0 !important;
+        }
+
+        .menu__btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .menu__btn>span,
+        .menu__btn>span::before,
+        .menu__btn>span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #616161;
+            transition-duration: .25s;
+        }
+
+        .menu__btn>span::before {
+            content: '';
+            top: -8px;
+        }
+
+        .menu__btn>span::after {
+            content: '';
+            top: 8px;
+        }
+
+        .menu__box {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 200px;
+            height: 100%;
+            margin: 0;
+            padding: 80px 0;
+            list-style: none;
+            background-color: #ECEFF1;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+            transition-duration: .25s;
+            z-index: 1;
+        }
+
+        .menu__item {
+            display: block;
+            padding: 12px 24px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            transition-duration: .25s;
+        }
+
+        .menu__item:hover {
+            background-color: #CFD8DC;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+
+        <ul class="menu__box">
+            <li>
+            <li><a class="menu__item" href="index.html">Esileht</a></li>
+            <li><a class="menu__item" href="gallery.html">Galerii</a></li>
+            <li><a class="menu__item" href="https://www.tptlive.ee/" target="_blank">Kool</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px;color: black;">Tere kassihuviline!</h1>
+            <p>
+                “Ma mõtlesin,” sõnas Ipslore mõrult, “et kas siin maailmas on midagi, mis muudab elu elamisväärseks?”
+                Surm mõtles selle üle järele KASSID, ütles ta lõpuks KASSID ON TOREDAD.
+            </p>
+            <p>Terry Pratchett (1948-2015)</p>
+        </div>
+    </div>
+
+    <br>
+
+    <table rows="1" columns="2">
+        <tr style="vertical-align:top">
+            <td>
+                <img src="pildid/pic1_vert.jpg" alt="cat picture" style="width:100%;height:100%;">
+            </td>
+            <td style="text-align: justify;">
+                <!-- Allikas: https://et.wikipedia.org/wiki/Kass -->
+                <p>Kass ehk kodukass (Felis catus) on kaslaste sugukonna kassi perekonda kuuluv väike kiskja, kaslaste
+                    hulgas ainus koduloom.</p>
+                <p>Kodukasse arvatakse maailmas elavat 600 miljonit ehk rohkem kui kõiki teisi kaslasi kokku.</p>
+                <p>Tähelepanu on pööratud nende ökoloogilisele mõjule, sest kodukasside saagiks langeb miljardeid loomi
+                    aastas ning nende tõttu on välja surnud vähemalt 33 loomaliiki.</p>
+                <p>Varasemate paleontoloogiliste avastuste järgi arvati, et kassi kodustamine sai alguse Vana-Egiptuses
+                    umbes 2000 eKr, kuid 2004. aastal avastasid arheozooloogid kassi jäänused inimese jäänuste kõrvalt
+                    Küprose saarel asuvast vanemast matmispaigast, mille tõttu kassi kodustamise aeg paigutatakse nüüd
+                    ajavahemikku 9000–7500 eKr. Leitud kass on morfoloogiliste tunnuste poolest väga lähedane aafrika
+                    metskassile, tal puuduvad kodustamisest tulenevad muutused skeletis. Seetõttu võis pigem olla
+                    tegemist taltsutatud kui kodustatud kassiga. Inimeste ja kasside kooselu sai tõeliselt alguse koos
+                    põlluharimisega: viljaaidad meelitasid ligi hiiri ja rotte, need omakorda kasse, kes olid nende
+                    looduslikud vaenlased.</p>
+                <p>Carlos Driscoll tegi 979 kassi põhjal uurimuse, mis võimaldab järeldada, et kasside kodustamine sai
+                    tõenäoliselt alguse Viljaka Poolkuu piirkonnast. Sealjuures kodustati aafrika metskass viiel korral
+                    ajavahemikus 8000–6000 eKr.</p>
+                <p>Hiirte ja rottide püüdjana on inimesed peale kodukassi pidanud ka teisi kaslasi – taltsutatud aafrika
+                    metskasse ja jaguarundisid.</p>
+                <p>Vana-Egiptuses palsameeriti kasse kui pühi loomi samamoodi nagu inimesi. Kasse kaitses kassipäine
+                    jumalanna Bastet.</p>
+                <p>Egiptlaste kaudu õppisid kasse tundma kreeklased. Vana-Kreekas peeti kasse luksusloomadena, sest
+                    hiiri püüdsid seal nirgid.</p>
+                <p>Vana-Roomas sai kassipidamine üldiseks keisririigi ajastul. Seal võttis ta tuhkrult ja nirgilt üle
+                    hiirepüüdmise töö. Aeg-ajalt kasutati teda ka aedades muttide tõrjeks. Roomlaste kaudu levis
+                    kodukass mujalegi Euroopasse, kuigi esialgu väikesel arvul. Kassi ladinakeelne nimi cattus pärineb
+                    4. sajandil elanud Palladiuselt.</p>
+                <p>Skandinaavia mütoloogias peeti kassi Freyja lemmikloomaks. Kujutleti, et kassid veavad Freyja
+                    sõidukit.</p>
+                <p>Katoliikluses on kasside kaitsepühak Gertrud Nivelles'ist.</p>
+                <p>Euroopas muutus kasside pidamine taas üldiseks keskajal. Esialgu polnud temaga seotud mingeid halbu
+                    eelarvamusi ega uskumusi. Oma öise ringirändamise ja salaja hiilimise tõttu muutus ta ebausu
+                    objektiks suhteliselt hiljuti.</p>
+                <p>Inimene on viinud kassi endaga kaasa kohtadesse, kus looduslikult väikekiskjad varem puudusid.
+                    Seetõttu on kass põhjustanud teadaolevalt vähemalt 33 linnuliigi väljasuremise.</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Kontaktid -->
+    <footer>
+        <div>
+            <h4>Kontaktid</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nimi:</td>
+                        <td>Eliise Bachmann</td>
+                    </tr>
+                    <tr>
+                        <td>E-post:</td>
+                        <td>eliise.bachmann@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </footer>
+</body>
+
+</html>
